@@ -9,7 +9,6 @@ export interface pk {
   url: string,
 }
 
-
 export async function getServerSideProps(context: any) {  
 
   const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
@@ -18,7 +17,6 @@ export async function getServerSideProps(context: any) {
   return {
     props: { data }
   }
-
 }
 
 const Home: NextPage = ({ data }: any) => {
